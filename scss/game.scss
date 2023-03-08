@@ -1,0 +1,65 @@
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// .right {
+// }
+.voice {
+  height: 200px;
+  width: 400px;
+  border: 3px solid orange;
+  border-radius: 30px;
+}
+
+.btn_start_game {
+  height: 50px;
+}
+
+.voices {
+  display: none;
+  position: absolute;
+  background-color: rgba(168, 129, 213, 0.5);
+}
+
+.voices_img {
+  height: 200px;
+  width: 300px;
+}
+
+// .left {
+// }
+
+.rival {
+  height: 200px;
+  width: 400px;
+  border: 3px solid orange;
+  border-radius: 30px;
+}
+
+.rival_voices_img {
+  display: none;
+  position: absolute;
+  height: 200px;
+  width: 300px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  border: 2px solid teal;
+}
+.result_title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.result_raund {
+  display: flex;
+}
+.result_arr {
+  // border: 5px solid wheat;
+}
+.result_arr2 {
+}

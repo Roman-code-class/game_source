@@ -1,0 +1,118 @@
+// Миксины
+// @import "mixins.scss";
+
+// Шрифты
+@import "fonts.scss";
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto&display=swap");
+// Шрифт по умолчанию
+$fontfamily: Poppins, sans-serif;
+// 'Roboto', sans-serif;
+// цвет шрифта
+
+$colortext: rgba(255, 255, 255, 0.55);
+$colordoptext: rgba(255, 255, 255, 0.9);
+$colordopOrange: #ff6e30;
+
+// переменные
+$minwidth: 320px;
+$mw: 1400px;
+$md1: $mw + 12px;
+$md2: 991.98px;
+$md3: 800.98px;
+$md4: 479.98px;
+
+// обнулние
+li {
+  margin: 0;
+  list-style-type: none; /* Убираем маркеры */
+}
+ul {
+  margin: 0;
+  margin-left: 0; /* Отступ слева в браузере IE и Opera */
+  padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body {
+  background-color: #4b565f;
+  font-size: 18px;
+  color: #eeecec;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // @media (max-width: $md3) {
+  //   height: 100px;
+  // }
+  // &._lock {
+  //   overflow: hidden;
+  //   @media (max-width) {
+  //     width: 100%;
+  //     position: fixed;
+  //     overflow: hidden;
+  //   }
+  // }
+}
+
+// Оболочка
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  // &._loader{}
+}
+
+._container {
+  max-width: $mw;
+  margin: 0 auto;
+  justify-content: center;
+
+  @media (max-width: $md3) {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+// подключение стилей блоков
+@import "animScroll.scss";
+@import "game.scss";
+@import "game2.scss";
+@import "header.scss";
+// @import "popup.scss";
+.page {
+  flex: 1 1 auto;
+}
+
+// инпут//
+input[type="text"] {
+  font-family: $fontfamily; /* 1 */
+  font-size: 14px; /* 1 */
+  line-height: inherit; /* 1 */
+  margin: 0; /* 2 */
+  color: rgba(255, 255, 255, 0.38);
+  background-color: rgba(40, 48, 54, 1);
+  border: none;
+  outline: none;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+input[type="submit"] {
+  margin: 0; /* 2 */
+  color: #fff;
+  background: $colordopOrange;
+  border-radius: 8px;
+  font-family: $fontfamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 12px 36.12px;
+  cursor: pointer;
+  border: none;
+}
